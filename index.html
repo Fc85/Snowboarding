@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <!--Responsive-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Import de la feuille de style-->
+        <link rel="stylesheet" href="./css/style.css"/>
+        <!--Choix du favicon-->
+        <link rel="icon" type="image/png" href="images/favicon.png" />
+        <!--Titre de l'onglet-->
+        <title>Snowboarding </title>
+        <!--Import de la police d'écriture-->
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+        <!--Import de font Awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+        <!--Import des script js-->
+        <script type="text/javascript" src="./js/script.js"></script>
+        
+    </head>
+
+    <!-- Au chargement de la page, execution de la fonction showSlides afin d'afficher la première image-->
+    <body onload="showSlides(slideIndex)">
+
+        <header>
+            
+            <!--Navigateur-->
+            <nav id="nav">
+                
+                <!--Logo-->
+                <img src="images/LOGO.png" alt="Logo du site (deux montagne cote à cote)" />
+                
+                <!--Icon menu burger qui appelle la fonction afficherMenu()-->
+                <i id="burger" class="fas fa-bars fa-3x" onclick="afficherMenu()"></i>
+                
+                <!--Icon croix qui appelle la fonction cacherMenu()-->
+                <i id="close" class="fas fa-times fa-3x" onclick="cacherMenu()"></i>
+                
+                <!--Liste des boutons du nav-->
+                <ul id="nav_liste">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#snowboards">SNOWBOARDS</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#features">FEATURES</a></li>
+                    <li><a href="#footer">FOOTER</a></li>
+                </ul>
+
+                <!--Liste des icons du nav-->
+                <ul id="nav_icons">
+                    <li><i class="fas fa-euro-sign"></i></li>
+                    <li><i class="fas fa-shopping-bag"></i></li>
+                    <li><i class="fas fa-search"></i></li>
+                </ul>
+
+            </nav>
+        </header>
+
+        <!--Section Home-->
+        <section id="home">
+
+            <div>
+                <h1>SNOWBOARD COMPAGNY</h1>
+                <button>SEE DETAILS</button>
+            </div>
+
+        </section>
+
+        <!--Section du carrousel-->
+        <section id="snowboards">
+
+            <hr>
+            <h2>SNOWBOARDS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            <!-- Container des slide -->
+            <div class="slider">
+
+                <!-- Bouton précédent (Unicode)-->
+                <a class="precedent" onclick="plusSlides(-1)">&#10094;</a>
+
+                <!-- Images du slider -->
+                <div class="snow_slide anim">
+                    <img src="./images/snowboard1.png">
+                </div>
+            
+                <div class="snow_slide anim">
+                    <img src="./images/snowboard2.png">
+                </div>
+            
+                <div class="snow_slide anim">
+                    <img src="./images/snowboard3.png">
+                </div>
+            
+                <div class="snow_slide anim">
+                    <img src="./images/snowboard4.png">
+                </div>
+            
+                <div class="snow_slide anim">
+                    <img src="./images/snowboard5.png">
+                </div>
+            
+                <!-- Bouton suivant (Unicode)-->
+                <a class="suivant" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            
+            <!-- Cercles d'images -->
+            <div id="cercle_div">
+                <span class="cercle" onclick="currentSlide(1)"></span>
+                <span class="cercle" onclick="currentSlide(2)"></span>
+                <span class="cercle" onclick="currentSlide(3)"></span>
+                <span class="cercle" onclick="currentSlide(4)"></span>
+                <span class="cercle" onclick="currentSlide(5)"></span>
+            </div>
+
+            <h3>SNOWBOARD EXTREME SERIES</h3>
+
+        </section>
+
+        <!--Section about-->
+        <section id="about">
+
+            <div>
+                <h2>THE MOUNTAIN SNOWBOARDING</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ipsam sapiente temporibus? Dolore cupiditate animi, maiores blanditiis, voluptatum doloribus, facilis laboriosam ipsam labore dicta perspiciatis. Enim doloribus esse expedita nemo aspernatur, nobis voluptatem deleniti dolorem quibusdam debitis totam natus laudantium quas officiis praesentium minus! Accusamus, architecto maiores.</p>
+                <!--Partie cachée en version mobile/tablette-->
+                <p id="lire_suite">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ipsam sapiente temporibus? Dolore cupiditate animi, maiores blanditiis, voluptatum doloribus, facilis laboriosam ipsam labore dicta perspiciatis. Enim doloribus esse expedita nemo aspernatur, nobis voluptatem deleniti dolorem quibusdam debitis totam natus laudantium quas officiis praesentium minus! Accusamus, architecto maiores.</p>
+            </div>
+
+        </section>
+
+        <!--Section features-->
+        <section id="features">
+
+            <h2>FEATURES</h2>
+
+            <!--Icon croix-->
+            <i class="fas fa-times fa-2x"></i>
+
+            <!--Container des images-->
+            <div id="img_div">
+
+                <div id="img1">
+
+                    <!--Image d'origine qui lorsqu'on clique appelle la fonction zoomIn(i)-->
+                    <img src="./images/img 1.png" alt="image 1" onclick="zoomIn('zoom_img1')"/>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+
+                </div>
+
+                <div id="img2">
+
+                    <!--Image d'origine qui lorsqu'on clique appelle la fonction zoomIn(i)-->
+                    <img src="./images/img 2.jpg" alt="image 2" onclick="zoomIn('zoom_img2')"/>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        
+                </div>
+
+                <div id="img3">
+
+                    <!--Image d'origine qui lorsqu'on clique appelle la fonction zoomIn(i)-->
+                    <img src="./images/img 3.jpg" alt="image 3" onclick="zoomIn('zoom_img3')"/>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        
+                </div>
+                
+                <div id="img4">
+
+                    <!--Image d'origine qui lorsqu'on clique appelle la fonction zoomIn(i)-->
+                    <img src="./images/img 4.jpg" alt="image 4" onclick="zoomIn('zoom_img4')"/>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        
+                </div>
+                
+            </div>
+
+        </section>
+
+
+         <!--Div de l'image d'origine zoomée qui lorsqu'on clique appelle la fonction zoomOut(j)-->
+        <div id="zoom_img1" class="zoom_img" onclick="zoomOut('zoom_img1')">
+                
+            <!--Image zoomée-->
+            <img class="zoomed_img" src="./images/img 1.png" alt="image 1 zoom">
+                    
+        </div>
+
+        <!--Div de l'image d'origine zoomée qui lorsqu'on clique appelle la fonction zoomOut(j)-->
+        <div id="zoom_img2" class="zoom_img" onclick="zoomOut('zoom_img2')">
+                
+            <!--Image zoomée-->
+            <img class="zoomed_img" src="./images/img 2.jpg" alt="image 2 zoom">
+                    
+        </div>
+        
+         <!--Div de l'image d'origine zoomée qui lorsqu'on clique appelle la fonction zoomOut(j)-->
+        <div id="zoom_img3" class="zoom_img" onclick="zoomOut('zoom_img3')">
+                
+            <!--Image zoomée-->
+            <img class="zoomed_img" src="./images/img 3.jpg" alt="image 3 zoom">
+                    
+        </div>
+        
+         <!--Div de l'image d'origine zoomée qui lorsqu'on clique appelle la fonction zoomOut(j)-->
+        <div id="zoom_img4" class="zoom_img" onclick="zoomOut('zoom_img4')">
+                
+            <!--Image zoomée-->
+            <img class="zoomed_img" src="./images/img 4.jpg" alt="image 4 zoom">
+                    
+        </div>
+
+        <!--Footer-->
+        <footer id="footer">
+
+            <!--Partie supérieur du footer-->
+            <div id="footer_top">
+
+                <!--Liste Products-->
+                <ul id="products">
+
+                    <li id="strong">PRODUCTS</li>
+                    <li>Mens</li>
+                    <li>Womens</li>
+                    <li>Youth</li>
+
+                </ul>
+
+                <!--Liste About-->
+                <ul id="footer_about">
+
+                    <li id="strong">ABOUT</li>
+                    <li>Careers and Interneships</li>
+                    <li>Sponsorships</li>
+                    <li>Team</li>
+                    <li>Catalog Request/Download</li>
+
+                </ul>
+
+                <!--Liste Customer Support-->
+                <ul id="customer_support">
+
+                    <li id="strong">CUSTOMER SUPPORT</li>
+                    <li>Contact Us</li>
+                    <li>Shipping and order tracking</li>
+                    <li>Easy Returns</li>
+                    <li>Warranty</li>
+                    <li>Remplacement Brinding parts</li>
+
+                </ul>
+
+                <!--Div contenant la partie newsletter et les réseaux-->
+                <div id="newsletter_reseaux">
+                    <div>
+                        <p id="strong">NEWSLETTER</p>
+
+                        <!--Formulaire d'email-->
+                        <form>
+                            <input type="email" placeholder="Enter your email"/>
+                        </form>
+
+                    </div>
+
+                    <!--Liste des icons de réseaux-->
+                    <ul>
+                        <li><i class="fab fa-facebook-f"></i></li>
+                        <li><i class="fab fa-twitter"></i></li>
+                        <li><i class="fab fa-instagram"></i></li>
+                        <li><i class="fab fa-pinterest"></i></li>
+                        <li><i class="fab fa-youtube"></i></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!--Partie inférieur du footer-->
+            <div id="footer_bottom">
+
+                <p>©2014 Mountain snowboards</p>
+                <div id="region">
+                    <!--Drapeau des US-->
+                    <img src="images/flag.png" alt="drapeau américain" />
+                    <p>Change region</p>
+                </div>
+
+
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>
